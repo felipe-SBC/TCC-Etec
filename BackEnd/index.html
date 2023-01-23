@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="pt-br" dir="ltr"> 
+  <head> 
+        <link href="estilos/estilologin.css" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8">
+	      <title>Login</title>
+  </head> 
+  <body>
+    <h1 style="color: white;">SPAWN</h1>
+    <!--<img src="imagens/logo.jpg" alt="some text" id="logo">-->
+    <div class="wrapper">
+      <div class="titulo">Login</div>
+      <form id="login" action="validalogin.php" method="POST">
+        <div class="campo">
+          <input type="text" name="email" required>
+          <label>Endereço de email</label>
+        </div>
+        <div class="campo">
+          <input type="password" name="senha" required>
+          <label>Senha</label>
+        </div>
+        <div class="campo">
+          <input type="submit" value="Login">
+        </div>
+        <div class="link_cadastro">Ainda não faz parte da comunidade? <a href="cadastrar.html">Cadastre-se!</a></a></div>
+      </form>
+    </div>
+    <div>
+      <a href="documentacao.html" style="color: white;">Documentação</a>
+    </div>
+  </body> 					
+</html>

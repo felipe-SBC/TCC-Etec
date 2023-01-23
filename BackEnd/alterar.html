@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="estilos/estilocad.css" rel="stylesheet">
+  <title>Tela de alteração</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="titulo">Alterar Dados</div>
+    <div class="content">
+      <form id="alterar1" action="" method="POST">
+        <div class="detalhes_usuario">
+       
+          <div class="input-box">
+            <span class="detalhes">Nome</span>
+            <input type="text" id="nome" name="nome" placeholder="Digite seu Nome" required>
+          </div>
+          <div class="input-box">
+            <span class="detalhes">Apelido</span>
+            <input type="text" id="apelido" name="apelido" placeholder="Digite seu Apelido" required>
+          </div>
+
+          <div class="input-box">
+            <span class="detalhes">Telefone</span>
+            <input type="text" id="telefone" name="telefone" placeholder="Digite seu Telefone" required>
+          </div>
+          <div class="input-box">
+            <span class="detalhes">Senha</span>
+            <input type="password" id="senha" name="senha" placeholder="Digite sua nova senha" required>
+          </div>
+          <div class="input-box">
+            <span class="detalhes">Data de nascimento</span>
+            <input type="date" id="datanascimento" name="datanascimento" placeholder="Coloque sua data de nascimento"
+              required>
+          </div>
+          <div class="input-box">
+            <span class="detalhes">Plataforma</span>
+            <input type="text" id="plataforma" name="plataforma" placeholder="Coloque a plataforma que você joga"
+              required>
+          </div>
+          <!--<div class="input-box">
+            <span class="detalhes">Gênero</span>
+            <input type="text" id="genero" name="genero" placeholder="Coloque seu gênero" required>
+          </div>-->
+        </div>
+        <div class="detalhes_genero">
+          <input type="radio" name="genero" id="ponto-1" value="Masculino">
+          <input type="radio" name="genero" id="ponto-2" value="Feminino">
+          <input type="radio" name="genero" id="ponto-3" value="Outros">
+          <span class="titulo_genero">Gênero</span>
+          <div class="categoria">
+            <label for="ponto-1">
+              <span class="ponto um"></span>
+              <span class="genero">Masculino</span>
+            </label>
+            <label for="ponto-2">
+              <span class="ponto dois"></span>
+              <span class="genero">Feminino</span>
+            </label>
+            <label for="ponto-3">
+              <span class="ponto tres"></span>
+              <span class="genero">Outros</span>
+            </label>
+          </div>
+        </div>
+        <div class="botao">
+          <form action="" method="post" id="">
+            <input type="submit" id="alterar" value="alterar">
+          </form>
+        </div>
+      </form>
+      <h2></h2>
+      <div id="resposta">
+        <!-- Mostra a resposta aqui -->
+      </div>
+      <div class="link_login">Para fazer o login novamente <a href="logout.php">clique aqui</a></a></div>
+    </div>
+  </div>
+
+</body>
+
+</html>
+
+<script>
+  $(document).ready(function () {
+
+    $('#alterar').click(function () {
+
+      var dados = $('#alterar1').serialize();
+
+      $.ajax({
+        method: "POST",
+        url: "alt.php",
+        data: dados,
+
+        beforeSend: function () {
+          $("h2").html("Processo em andamento..");
+        }
+      })
+
+        .done(function (msg) {
+
+          $("h2").html("Retorno da Inclusão..");
+          $("#resposta").html(msg);
+
+          //alert("Dados cadastrados com sucesso!");
+
+        })
+
+        .fail(function () {
+
+          alert("Falha na Inclusão..");
+        })
+      return false;
+    });
+  });
+</script>

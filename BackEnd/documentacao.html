@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+    <head>
+		<title>Documentação</title>
+    	<meta charset="utf8">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+		<link href="estilos/estilodoc.css" rel="stylesheet">
+    </head>
+	<body>
+		<h1>
+			Grupo: Felipe Soares<br>
+            Hiago Henrique Moura da Silva<br>			  
+			Ighor Silva Bezerra<br>
+			Julio Cesar Rodrigues Oliveira<br>
+            Thiago Henrique de Oliveira Valota
+        </h1>
+        <h2>Tema: Uma rede social para gamers</h2>
+		<p>
+			A rede social para gamers trata-se de uma estrutura social composta por diversas pessoas conectadas por um ou vários tipos de relações, que compartilham valores e objetivos em comum, e tem como objetivo principal unir essas pessoas, nos aplicativos mais famosos do mercado não temos um espaço dedicado apenas para estas pessoas, e quando temos, fica escondido ou não é bem trabalhado.
+		</p>
+        <h2>Dicionário de dados</h2>
+        	<h3>registro</h3>
+			<img src="imagens/cadastro.png" alt="some text">	
+        	<h3>Perfil</h3>
+			<img src="imagens/perfil.png" alt="some text">
+		<h3>Postagens</h3>
+			<img src="imagens/postagens.png" alt="some text">
+		<div class="container2">	
+        <h2>Estrutura de dados</h2>
+
+        <p>create database usuario;<br></p>
+
+        <p>use usuario;<br></p>
+
+        <p>create table cadastroUsuario(<br>
+        email varchar(255) not null primary key,<br>
+        senha varchar(20) not null,<br>
+        nome varchar(100) not null,<br>
+        datanascimento date not null,<br>
+        genero varchar(12) not null,<br>
+        telefone char(11) not null,<br>
+        plataforma varchar(20) not null,<br>
+        apelido varchar(30) not null<br>
+        );</p>
+
+        <p>create table perfil(<br>
+        cod_perfil int not null primary key auto_increment,<br>
+        foto_perfil mediumblob not null,<br>
+        nome_arquivo varchar(150) not null,<br>
+        descricao_perfil varchar(100) null,<br>
+        email varchar(255) not null,<br>
+        foreign key (email) references cadastroUsuario (email)<br>
+        );</p>
+
+        <p>create table postagens(<br>
+        cod_postagens int not null primary key auto_increment,<br>
+        imagem_post mediumblob null,<br>
+        descricao varchar(255) null,<br>
+        nome_arquivo varchar(150) null,<br>
+        email varchar(255) not null,<br>
+        foreign key (email) references cadastroUsuario (email)<br>
+        );</p>
+			
+	    <center><h4>Diagrama de uso de caso</h4></center>
+            <p>Este diagrama mostra o que o usuário fará a partir de quando o usuário entrará no SPAWN.</p>
+            <img src="imagens/diagrama_caso_uso.png" alt="some text" width="600px">
+        </div>		
+	
+        <div class="container_3">
+		<h4>Semana 1 (19/08 a 25/08)</h4>
+        <h5><li>Criado a pagina index</li> <br><li>Criado o banco de dados "registro"</li></h5>
+        <h4>Semana 2 (26/08 a 01/09)</h4>
+        <h5><li>Criação da documentação e o começo do CRUD</li></h5>
+        <h4>Semana 3 (02/09 a 08/09)</h4>
+        <h5><li>Melhora no banco de dados</li> <br> <li>Melhorias no visual</li></h5>
+        <h4>Semana 4 (09/09 a 15/09)</h4>
+        <h5><li>Partes finais da estrutura e Dicionário de dados</li> <br> <li>Fazendo as conexões dos bancos</li></h5>
+        <h4>Semana 5 (16/09 a 22/09)</h4>
+        <h5><li>Começando a pagina principal (feed)</li> <br> <li>Feito o menu no feed</li></h5>
+        <h4>Semana 6 (23/09 a 29/09)</h4>
+        <h5>Refazendo a tela de login e começo da aplicação das postagens</h5>
+        <h4>Semana 7 (30/09 a 06/10)</h4>
+        <h5>Tela de login completa</h5>
+        <h4>Semana 8 (07/09 a 13/10)</h4>
+        <h5>Tela de cadastro atualizada</h5>
+        <h4>Semana 9 (14/09 a 20/10)</h4>
+        <h5>Correções e Melhorias no codigo</h5>
+        <h4>Semana 10 (21/09 a 27/10)</h4>
+        <h5>"Tentativas e erros" nas postagens</h5>
+        <h4>Semana 11 (28/10 a 03/11)</h4>
+        <h5>Começo da pagina usuário</h5>
+        <h4>Semana 12 (04/11 a 10/11)</h4>
+        <h5>Postagens completas</h5>
+        <h4>Semana 13 (11/11 a 17/11)</h4>
+        <h5>Melhora no visual das postagens</h5>
+        <h4>Semana 14 (18/11 a 24/11)</h4>
+        <h5>Melhora no visual da pagina usuario</h5>
+        <h4>Semana 15 (25/11 a 01/12)</h4>
+        <h5>Exclusão e alteração do usuario</h5>
+        </div>
+    </body>
+</html>

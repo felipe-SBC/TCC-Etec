@@ -1,0 +1,49 @@
+body{
+	background-color: #4B0082;
+}
+    
+.container{			
+	position:absolute;
+	left:25%; top:20%; 
+	margin-left:10px;
+	background:#8A2BE2; 
+	font-family: arial;
+	text-align: center; 
+  	width: 50%;
+  	padding: 0 5%; 
+	border: solid black 5px;
+}
+.link{
+  	margin-left:100px; 
+  	margin-top: 700px; 
+  	font-size: 30px;  
+  	width: 13%;  
+	padding: 0 0%; 
+	border: solid black 2px;
+	color: white;
+}
+*{
+	font-family: 'STIX Two Text', serif;
+	margin: 2;
+	padding: 2;
+	box-sizing: border-box;
+}
+table,th,td {
+	border: 1px solid black;
+	border-collapse: collapse;	
+}
+h1, h2, h3{
+     font-size: 27px;
+     margin: 50px;
+}
+h2{
+	text-align: center;
+}
+p{
+	font-size: 20px;
+	text-align:center;
+}
+.container2{
+    font-size: 30px;
+	padding-top: 226px ;
+}

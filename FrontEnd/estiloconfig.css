@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{
+	margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+body{
+	background-color: #691a8b;
+	height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background: linear-gradient(135deg, #410079, #6c3497);
+}
+.botao input{
+    padding: 20px;
+ 	margin: 40px;
+    height: 100%;
+    width: 100%;
+    border-radius: 50px;
+    border: #000 2px solid;
+    color: black;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: linear-gradient(45deg, #c3abdb, #e1d4ed);
+}
+ #alt1{
+    position: relative;
+    left: 100px;
+}
+#apagar{
+    position: relative;
+    right: 20px;
+}

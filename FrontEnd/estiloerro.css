@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+body{
+    height: 100vh;
+    background: linear-gradient(-95deg, #592a9b, #5c0082);
+}
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+.erro-pagina{
+    position: absolute;
+    top: 10%;
+    left: 15%;
+    right: 15%;
+    bottom: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #711d96;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+}
+.erro-pagina .content{
+    max-width: 600px;
+    text-align: center;
+}
+.content h2.header{
+    font-size: 18vw;
+    line-height: 1em;
+    position: relative;
+}
+.content h2.header:after{
+    position: absolute;
+    content: attr(data-text);
+    top: 0;
+    left: 0;
+    right: 0;
+    background: -webkit-repeating-linear-gradient(-45deg, #6333a5, #855bb7, #c3abdb, #ffffff, #e1d4ed, #a582c9, #6333a5);
+    background-size: 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.25);
+    animation: animate 10s ease-in-out infinite;
+}
+@keyframes animate{
+    0%{
+        background-position: 0 0;
+    }
+    25%{
+        background-position: 100% 0;
+    }
+    50%{
+        background-position: 100% 100%;
+    }
+    75%{
+        background-position: 0% 100%;
+    }
+    100%{
+        background-position: 0% 0%;
+    }
+}
+.content h4{
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: white;
+    max-width: 600px;
+    font-size: 1.5em;
+    position: relative;
+}
+.content h4:after{
+    position: absolute;
+    content: attr(data-text);
+    top: 0;
+    left: 0;
+    right: 0;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.content p{
+    font-size: 1.2em;
+    color: white;
+}
+.content .botoes{
+    margin: 25px 0;
+    display: inline-flex;
+}
+.content .botoes a{
+    display: inline-block;
+    margin: 0 10px;
+    text-decoration: none;
+    border: 2px solid rgb(19, 19, 19);
+    color: white;
+    font-weight: 500;
+    padding: 10px 25px;
+    border-radius: 25px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+.content .botoes a:hover{
+    background: rgb(19, 19, 19);
+}

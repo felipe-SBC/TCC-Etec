@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{
+	margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+body{
+  background-color: #4b0082;
+  color: black;
+}
+
+.pagina_principal{
+	position: absolute;
+	/*padding-left: 90px;*/
+	height: 100%;
+	width: calc(100% - 78px); /*foi alterado de calc(100% - 240px) para calc(100% - 78px);*/
+	left: 78px; /*foi alterado de 240px para 78px*/
+	transition: all 0.5s ease;
+}
+.pagina_principal .texto{
+	font-size: 25px;
+	font-weight: 500;
+	color: white;
+	margin: 12px;
+}
+.sidebar.active ~ .pagina_principal{ /*Por causa do scripts, esse bloco foi adicionado*/
+  font-size: 25px;
+	width: calc(100% - 240px);
+	left: 240px;
+	position: absolute;
+	padding-left: 10px;
+}
+
+.card{
+  max-width: 40%;
+  margin: 70px auto 100px;
+  background-color: white;
+  box-shadow: 0 10px 90px #00000024;
+  text-align: center;
+  font-size: 20px;
+  border-radius: 15px;
+}
+.card .card_cabecalho{
+  position: relative;
+  height: 100px;
+}
+.card .card_cabecalho .imagem_perfil{
+  width: 130px;
+  height: 130px;
+  border-radius: 1000px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 8px solid #9927ca;
+  box-shadow: 0 0 20px #00000033;
+}
+.card .card_cabecalho .imagem_perfil:hover{
+  width: 150px;
+  height: 150px;
+  border: 8px solid #691a8b;
+}
+.card .card_corpo{
+  padding: 10px;
+  height: 350px;
+  background-color: white;
+  border-radius: 15px;
+}
+.card .card_corpo .nome{
+  font-size: 28px;
+  font-weight: bold;
+  color: #5c0082;
+}
+.card .card_corpo .nome:hover{
+  font-size: 32px;
+  color: #691a8b;
+}
+.card .card_corpo .mail{
+  font-size: 18px;
+  color: #9b9999;
+}
+.card .card_corpo .mail:hover{
+  font-size: 22px;
+  color: #9b9999;
+}
+.card .card_corpo .outras_inf{
+  margin-top: 10px;
+  font-size: 18px;
+}
+img, button{
+  cursor: pointer;
+}
+@media screen and (max-width: 575px) {
+  .card {
+    width: 96%;
+  }
+
+  .card .card_corpo {
+    padding: 10px 20px;
+  }
+}
